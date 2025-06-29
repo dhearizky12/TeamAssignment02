@@ -70,6 +70,10 @@ public class RestaurantQueue {
 
     public void displaySingle() {
         System.out.println("\n[SLL] Antrian Pelanggan:");
+        if (frontSingle == null) {
+            System.out.println("Belum ada pelanggan dalam antrian.\n");
+            return;
+        }
         Node current = frontSingle;
         int i = 1;
         while (current != null) {
@@ -77,7 +81,7 @@ public class RestaurantQueue {
             current = current.next;
         }
         System.out.println("Total: " + sizeSingle + " pelanggan\n");
-    }
+    }    
 
     /*** DOUBLY LINKED LIST METHODS ***/
     public void pushDouble(String name) {
@@ -112,6 +116,10 @@ public class RestaurantQueue {
 
     public void displayDouble() {
         System.out.println("\n[DLL] Antrian Pelanggan:");
+        if (frontDouble == null) {
+            System.out.println("Belum ada pelanggan dalam antrian.\n");
+            return;
+        }
         DNode current = frontDouble;
         int i = 1;
         while (current != null) {
@@ -119,7 +127,7 @@ public class RestaurantQueue {
             current = current.next;
         }
         System.out.println("Total: " + sizeDouble + " pelanggan\n");
-    }
+    }    
 
     /*** MAIN MENU ***/
     public static void main(String[] args) {
